@@ -6,17 +6,17 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
     
-    // Validation des données
-    if (!data.nom || !data.email || !data.telephone || !data.ville || !data.codePostal) {
-      return NextResponse.json({ error: 'Tous les champs sont requis' }, { status: 400 });
+    // Validation des données essentielles
+    if (!data.email || !data.telephone) {
+      return NextResponse.json({ error: 'Email et téléphone sont requis' }, { status: 400 });
     }
     
     // Envoyer l'email via Resend
     try {
       await resend.emails.send({
         from: 'C\'Propre <onboarding@resend.dev>',
-        to: process.env.NOTIFICATION_EMAIL || 'votre-email@exemple.com',
-        subject: `🎉 Nouvelle pré-inscription - ${data.nom}`,
+        to: process.env.NOTIFICATION_EMAIL || 'c.propre84@gmail.com',
+        subject: `🎉 Nouvelle pré-inscription VIP`,
         html: `
           <!DOCTYPE html>
           <html>
@@ -39,11 +39,11 @@ export async function POST(request: Request) {
                     <p>C'Propre - Pressing Professionnel</p>
                   </div>
                   <div class="info">
-                    <p><span class="label">👤 Nom :</span><span class="value">${data.nom}</span></p>
                     <p><span class="label">📧 Email :</span><span class="value">${data.email}</span></p>
                     <p><span class="label">📱 Téléphone :</span><span class="value">${data.telephone}</span></p>
-                    <p><span class="label">📍 Ville :</span><span class="value">${data.ville}</span></p>
-                    <p><span class="label">🏠 Code postal :</span><span class="value">${data.codePostal}</span></p>
+                    <p><span class="label">👤 Nom :</span><span class="value">${data.nom || 'Non renseigné'}</span></p>
+                    <p><span class="label">📍 Ville :</span><span class="value">${data.ville || 'Non renseigné'}</span></p>
+                    <p><span class="label">🏠 Code postal :</span><span class="value">${data.codePostal || 'Non renseigné'}</span></p>
                     <p><span class="label">📅 Date :</span><span class="value">${new Date().toLocaleString('fr-FR')}</span></p>
                   </div>
                   <p style="text-align: center; color: #666; margin-top: 20px;">
