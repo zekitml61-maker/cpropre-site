@@ -131,29 +131,12 @@ export default function PreInscriptionPage() {
               C'Propre
             </span>
           </h1>
-          
-          <div className="relative inline-block px-2 max-w-full">
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300 blur-lg opacity-50"></div>
-            <p className="relative text-white text-sm sm:text-base md:text-lg lg:text-xl font-black tracking-wide px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full shadow-2xl break-words">
-              Le pressing <span className="text-white drop-shadow-lg whitespace-nowrap">nouvelle génération</span>
-            </p>
-          </div>
         </div>
 
         <div className="max-w-6xl w-full px-2 mx-auto">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Partie gauche - Texte marketing AMÉLIORÉ - Optimisé mobile */}
             <div className="text-white space-y-4 md:space-y-6 order-1 md:order-1">
-              <div className="relative inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-2xl overflow-hidden">
-                {/* Effet K2000 */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[slide_2s_ease-in-out_infinite]" style={{
-                  backgroundSize: '200% 100%',
-                  animation: 'k2000 2s linear infinite'
-                }}></div>
-                <Gift size={20} className="text-white sm:w-6 sm:h-6 relative z-10" />
-                <span className="font-black text-sm sm:text-base md:text-lg relative z-10">BIENTÔT DISPONIBLE !</span>
-              </div>
-
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
                 Le pressing qui vient<br />
                 <span className="text-yellow-300">à vous</span>
