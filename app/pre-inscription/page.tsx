@@ -118,62 +118,66 @@ export default function PreInscriptionPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-blue-900/60 to-black/70"></div>
       </div>
 
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-3 sm:p-4 py-8 sm:py-12">
-        {/* Logo en haut avec effets améliorés - Optimisé mobile */}
-        <div className="mb-6 md:mb-10 text-center relative px-2 w-full">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-2 sm:p-4 py-4 sm:py-12">
+        {/* Logo en haut avec effets K2000 - Optimisé mobile */}
+        <div className="mb-2 md:mb-10 text-center relative px-2 w-full">
           {/* Effet glow derrière le logo */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="w-64 h-24 md:w-96 md:h-32 bg-gradient-to-r from-primary-500/30 via-blue-500/30 to-primary-500/30 blur-3xl animate-pulse"></div>
           </div>
           
-          <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-3 md:mb-4">
-            <span className="inline-block text-white drop-shadow-2xl">
+          <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4 overflow-hidden">
+            <span className="inline-block text-white drop-shadow-2xl relative">
               C'Propre
+              {/* Effet K2000 sur le logo */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[k2000_2s_linear_infinite]" style={{
+                animation: 'k2000 2s linear infinite'
+              }}></span>
             </span>
           </h1>
         </div>
 
         <div className="max-w-6xl w-full px-2 mx-auto">
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="flex flex-col md:grid md:grid-cols-2 gap-3 md:gap-8">
             {/* Partie gauche - Texte marketing AMÉLIORÉ - Optimisé mobile */}
-            <div className="text-white space-y-4 md:space-y-6 order-1 md:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
+            <div className="text-white space-y-2 md:space-y-6 order-1 md:order-1">
+              <h2 className="text-lg sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
                 Le pressing qui vient<br />
                 <span className="text-yellow-300">à vous</span>
               </h2>
 
-              <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed">
+              <p className="text-xs sm:text-lg md:text-xl text-white/90 leading-snug">
                 Plus besoin de vous déplacer ! <strong>C'Propre</strong> révolutionne le pressing avec la collecte et livraison à domicile.
               </p>
 
-              <div className="space-y-3 md:space-y-4">
-                <div className="group flex items-start gap-3 md:gap-4 bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-2xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Truck className="text-white" size={24} />
+              <div className="space-y-2 md:space-y-4">
+                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
+                    <Truck className="text-white" size={18} />
                   </div>
                   <div>
-                    <h3 className="font-black text-lg md:text-xl mb-1 text-white">Collecte à domicile</h3>
-                    <p className="text-white/90 text-xs md:text-sm">Nous venons récupérer votre linge chez vous</p>
+                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Collecte à domicile</h3>
+                    <p className="text-white/90 text-[10px] md:text-sm">Nous venons récupérer votre linge</p>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-3 md:gap-4 bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-2xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Sparkles className="text-white" size={24} />
+                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
+                    <Sparkles className="text-white" size={18} />
                   </div>
                   <div>
-                    <h3 className="font-black text-lg md:text-xl mb-1 text-white">Nettoyage professionnel</h3>
-                    <p className="text-white/90 text-xs md:text-sm">Traitement éco-responsable par des experts</p>
+                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Nettoyage pro</h3>
+                    <p className="text-white/90 text-[10px] md:text-sm">Traitement éco-responsable</p>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-3 md:gap-4 bg-white/10 backdrop-blur-sm p-3 md:p-4 rounded-2xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Home className="text-white" size={24} />
+                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
+                    <Home className="text-white" size={18} />
                   </div>
                   <div>
-                    <h3 className="font-black text-lg md:text-xl mb-1 text-white">Livraison express</h3>
-                    <p className="text-white/90 text-xs md:text-sm">Retour de votre linge impeccable sous 48h</p>
+                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Livraison 48h</h3>
+                    <p className="text-white/90 text-[10px] md:text-sm">Retour impeccable</p>
                   </div>
                 </div>
               </div>
@@ -182,27 +186,24 @@ export default function PreInscriptionPage() {
             </div>
 
             {/* Partie droite - Formulaire AMÉLIORÉ - Optimisé mobile */}
-            <div className="bg-white rounded-xl md:rounded-3xl shadow-2xl p-3 sm:p-4 md:p-6 lg:p-8 border-2 md:border-4 border-primary-500/20 w-full max-w-full mx-auto order-2 md:order-2">
-              <div className="text-center mb-3 md:mb-5">
-                <div className="inline-flex items-center gap-1.5 bg-green-100 text-green-800 px-2.5 py-1 md:px-4 md:py-2 rounded-full mb-2 md:mb-3">
-                  <CheckCircle size={16} className="md:w-5 md:h-5" />
-                  <span className="font-bold text-xs md:text-sm">Gratuit et sans engagement</span>
+            <div className="bg-white rounded-xl md:rounded-3xl shadow-2xl p-2 sm:p-4 md:p-6 lg:p-8 border-2 md:border-4 border-primary-500/20 w-full max-w-full mx-auto order-2 md:order-2">
+              <div className="text-center mb-2 md:mb-5">
+                <div className="inline-flex items-center gap-1 bg-green-100 text-green-800 px-2 py-0.5 md:px-4 md:py-2 rounded-full mb-1 md:mb-3">
+                  <CheckCircle size={12} className="md:w-5 md:h-5" />
+                  <span className="font-bold text-[10px] md:text-sm">Gratuit</span>
                 </div>
-                <h2 className="text-xl md:text-3xl font-black text-gray-900 mb-1 md:mb-2">
-                  Pré-inscription Liste VIP
+                <h2 className="text-base md:text-3xl font-black text-gray-900 mb-1 md:mb-2">
+                  Liste VIP
                 </h2>
-                <p className="text-xs md:text-sm text-gray-600 font-semibold mb-2">
-                  Inscrivez-vous maintenant et soyez notifié par email dès le lancement !
-                </p>
-                <p className="text-[10px] md:text-xs text-primary-600 font-bold">
-                  ⚡ Soyez les premiers informés du lancement
+                <p className="text-[10px] md:text-sm text-gray-600 font-semibold">
+                  Soyez notifié du lancement !
                 </p>
               </div>
 
               {/* Zone de service */}
-              <div className="bg-gradient-to-r from-blue-50 to-primary-50 border-2 border-blue-200 rounded-xl p-3 md:p-4 mb-3 md:mb-4 text-center">
-                <p className="text-xs md:text-sm text-blue-900 font-bold flex items-center justify-center gap-2">
-                  <MapPin className="text-blue-600" size={16} />
+              <div className="bg-gradient-to-r from-blue-50 to-primary-50 border-2 border-blue-200 rounded-xl p-2 md:p-4 mb-2 md:mb-4 text-center">
+                <p className="text-[10px] md:text-sm text-blue-900 font-bold flex items-center justify-center gap-1">
+                  <MapPin className="text-blue-600" size={14} />
                   <span>Zone : Vaison + 10 km</span>
                 </p>
               </div>
@@ -214,20 +215,20 @@ export default function PreInscriptionPage() {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-2 md:space-y-4">
                 {/* Email */}
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
                     Email *
                   </label>
                   <div className="relative">
-                    <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition"
+                      className="w-full pl-10 pr-3 py-2 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition text-sm"
                       placeholder="jean@email.fr"
                     />
                   </div>
@@ -235,17 +236,17 @@ export default function PreInscriptionPage() {
 
                 {/* Téléphone */}
                 <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">
+                  <label className="block text-xs font-bold text-gray-700 mb-1">
                     Téléphone *
                   </label>
                   <div className="relative">
-                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={16} />
                     <input
                       type="tel"
                       required
                       value={formData.telephone}
                       onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition"
+                      className="w-full pl-10 pr-3 py-2 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition text-sm"
                       placeholder="06 12 34 56 78"
                     />
                   </div>
@@ -255,7 +256,7 @@ export default function PreInscriptionPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-primary-600 to-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="w-full bg-gradient-to-r from-primary-600 to-blue-600 text-white py-2.5 rounded-xl font-bold text-sm hover:shadow-xl transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {loading ? (
                     <span className="flex items-center justify-center gap-2">
