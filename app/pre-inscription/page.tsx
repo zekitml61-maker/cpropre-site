@@ -179,9 +179,9 @@ export default function PreInscriptionPage() {
 
               <div className="flex items-center justify-center gap-1 md:flex-col md:space-y-4">
                 {/* Collecte */}
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-[1.02]" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-yellow-400/50 transition-all duration-300 group-hover:-translate-y-0.5">
-                    <Truck className="text-white transition-transform duration-300 group-hover:scale-105" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeIn hover:scale-[1.02]" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-yellow-400/50 transition-all duration-500">
+                    <Truck className="text-white transition-transform duration-500 group-hover:scale-110" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Collecte</h3>
@@ -189,12 +189,12 @@ export default function PreInscriptionPage() {
                 </div>
 
                 {/* Flèche 1 */}
-                <ArrowRight className="text-yellow-300 animate-pulse hidden sm:block md:hidden" size={20} strokeWidth={3} />
+                <ArrowRight className="text-yellow-300 opacity-60" size={20} strokeWidth={3} />
 
                 {/* Nettoyage */}
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-[1.02]" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-blue-400/50 transition-all duration-300 group-hover:-translate-y-0.5">
-                    <Sparkles className="text-white transition-transform duration-300 group-hover:scale-105 group-hover:rotate-6" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeIn hover:scale-[1.02]" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-blue-400/50 transition-all duration-500">
+                    <Sparkles className="text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-180" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Nettoyage</h3>
@@ -202,12 +202,12 @@ export default function PreInscriptionPage() {
                 </div>
 
                 {/* Flèche 2 */}
-                <ArrowRight className="text-blue-300 animate-pulse hidden sm:block md:hidden" size={20} strokeWidth={3} />
+                <ArrowRight className="text-blue-300 opacity-60" size={20} strokeWidth={3} />
 
                 {/* Livraison */}
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-[1.02]" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-green-400/50 transition-all duration-300 group-hover:-translate-y-0.5">
-                    <Home className="text-white transition-transform duration-300 group-hover:scale-105" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeIn hover:scale-[1.02]" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-green-400/50 transition-all duration-500">
+                    <Home className="text-white transition-transform duration-500 group-hover:scale-110" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Livraison</h3>
