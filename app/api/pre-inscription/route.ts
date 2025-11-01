@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+// API de pré-inscription avec envoi d'email via Resend
 export async function POST(request: Request) {
   try {
     const data = await request.json();
