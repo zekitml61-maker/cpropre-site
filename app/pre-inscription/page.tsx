@@ -152,7 +152,7 @@ export default function PreInscriptionPage() {
               </p>
 
               <div className="grid grid-cols-3 gap-2 md:space-y-4 md:grid-cols-1">
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.1s', opacity: 0 }}>
                   <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse">
                     <Truck className="text-white" size={22} />
                   </div>
@@ -161,7 +161,7 @@ export default function PreInscriptionPage() {
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.2s', opacity: 0 }}>
                   <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.2s' }}>
                     <Sparkles className="text-white" size={22} />
                   </div>
@@ -170,7 +170,7 @@ export default function PreInscriptionPage() {
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.3s', opacity: 0 }}>
                   <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.4s' }}>
                     <Home className="text-white" size={22} />
                   </div>
