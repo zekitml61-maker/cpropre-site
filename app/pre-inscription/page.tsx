@@ -150,34 +150,31 @@ export default function PreInscriptionPage() {
                 Plus besoin de vous déplacer ! <strong>C'Propre</strong> révolutionne le pressing avec la collecte et livraison à domicile.
               </p>
 
-              <div className="space-y-2 md:space-y-4">
-                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Truck className="text-white" size={18} />
+              <div className="grid grid-cols-3 gap-1.5 md:space-y-4 md:grid-cols-1">
+                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
+                    <Truck className="text-white" size={16} />
                   </div>
-                  <div>
-                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Collecte à domicile</h3>
-                    <p className="text-white/90 text-[10px] md:text-sm">Nous venons récupérer votre linge</p>
-                  </div>
-                </div>
-
-                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Sparkles className="text-white" size={18} />
-                  </div>
-                  <div>
-                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Nettoyage pro</h3>
-                    <p className="text-white/90 text-[10px] md:text-sm">Traitement éco-responsable</p>
+                  <div className="text-center md:text-left">
+                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Collecte</h3>
                   </div>
                 </div>
 
-                <div className="group flex items-start gap-2 md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-xl hover:bg-white/20 transition-all hover:scale-105 border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6">
-                    <Home className="text-white" size={18} />
+                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
+                    <Sparkles className="text-white" size={16} />
                   </div>
-                  <div>
-                    <h3 className="font-black text-sm md:text-xl mb-0.5 text-white">Livraison 48h</h3>
-                    <p className="text-white/90 text-[10px] md:text-sm">Retour impeccable</p>
+                  <div className="text-center md:text-left">
+                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Nettoyage</h3>
+                  </div>
+                </div>
+
+                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
+                    <Home className="text-white" size={16} />
+                  </div>
+                  <div className="text-center md:text-left">
+                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Livraison</h3>
                   </div>
                 </div>
               </div>
