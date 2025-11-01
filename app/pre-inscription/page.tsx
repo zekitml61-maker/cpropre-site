@@ -218,9 +218,9 @@ export default function PreInscriptionPage() {
 
               {/* Zone de service */}
               <div className="bg-gradient-to-r from-blue-50 to-primary-50 border-2 border-blue-200 rounded-xl p-3 md:p-4 mb-3 md:mb-4 text-center">
-                <p className="text-sm md:text-base text-blue-900 font-bold flex items-center justify-center gap-2">
-                  <MapPin className="text-blue-600" size={20} />
-                  <span>Zone : Vaison-la-Romaine et environs (10 km)</span>
+                <p className="text-xs md:text-sm text-blue-900 font-bold flex items-center justify-center gap-2">
+                  <MapPin className="text-blue-600" size={16} />
+                  <span>Zone : Vaison + 10 km</span>
                 </p>
               </div>
 
