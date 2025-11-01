@@ -2,18 +2,23 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 export async function POST(request: Request) {
-  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const data = await request.json();
+    console.log('📥 Données reçues:', data);
     
     // Validation des données essentielles
     if (!data.email || !data.telephone) {
+      console.log('❌ Validation échouée - champs manquants');
       return NextResponse.json({ error: 'Email et téléphone sont requis' }, { status: 400 });
     }
     
+    console.log('✅ Validation OK, tentative envoi email...');
+    
     // Envoyer l'email via Resend
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
     try {
-      await resend.emails.send({
+      const result = await resend.emails.send({
         from: 'C\'Propre <onboarding@resend.dev>',
         to: process.env.NOTIFICATION_EMAIL || 'c.propre84@gmail.com',
         subject: `🎉 Nouvelle pré-inscription VIP`,
@@ -56,15 +61,21 @@ export async function POST(request: Request) {
         `
       });
       
-      console.log('✅ Email envoyé avec succès');
-    } catch (emailError) {
+      console.log('✅ Email envoyé avec succès:', result);
+    } catch (emailError: any) {
       console.error('❌ Erreur envoi email:', emailError);
-      // On ne bloque pas l'inscription si l'email échoue
+      console.error('❌ Détails:', emailError.message);
+      // On continue même si l'email échoue
     }
     
+    console.log('✅ Inscription enregistrée');
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Erreur:', error);
-    return NextResponse.json({ error: 'Erreur lors de l\'inscription' }, { status: 500 });
+  } catch (error: any) {
+    console.error('❌ Erreur globale:', error);
+    console.error('❌ Message:', error.message);
+    return NextResponse.json({ 
+      error: 'Erreur lors de l\'inscription', 
+      details: error.message 
+    }, { status: 500 });
   }
 }
