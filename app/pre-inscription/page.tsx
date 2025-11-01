@@ -136,13 +136,10 @@ export default function PreInscriptionPage() {
           </div>
           
           <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4">
-            <span className="inline-block text-white drop-shadow-2xl relative overflow-hidden px-2">
-              C'Propre
-              {/* Effet K2000 optimisé sur le logo */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent w-full h-full" style={{
-                animation: 'k2000 2.5s linear infinite',
-                backgroundSize: '200% 100%'
-              }}></span>
+            <span className="inline-block text-white drop-shadow-2xl relative animate-pulse">
+              <span className="relative z-10">C'Propre</span>
+              {/* Effet glow pulsant sur le logo */}
+              <span className="absolute inset-0 blur-xl bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 opacity-60 animate-gradient-x"></span>
             </span>
           </h1>
         </div>
@@ -181,26 +178,26 @@ export default function PreInscriptionPage() {
               </p>
 
               <div className="grid grid-cols-3 gap-2 md:space-y-4 md:grid-cols-1">
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse">
-                    <Truck className="text-white" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg animate-bounce-slow group-hover:rotate-12 transition-transform">
+                    <Truck className="text-white animate-truck-move" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Collecte</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.2s' }}>
-                    <Sparkles className="text-white" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg animate-float group-hover:rotate-12 transition-transform">
+                    <Sparkles className="text-white animate-sparkle-shine" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Nettoyage</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.4s' }}>
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg animate-bounce-slow group-hover:rotate-12 transition-transform">
                     <Home className="text-white" size={22} />
                   </div>
                   <div className="text-center md:text-left">
