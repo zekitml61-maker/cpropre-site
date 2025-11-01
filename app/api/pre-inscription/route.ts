@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     try {
       const result = await resend.emails.send({
         from: 'C\'Propre <onboarding@resend.dev>',
-        to: 'z.ekitml61@gmail.com', // Email vérifié Resend
+        to: 'c.propre84@gmail.com', // Email du compte Resend
         subject: `🎉 Nouvelle pré-inscription VIP`,
         html: `
           <!DOCTYPE html>
