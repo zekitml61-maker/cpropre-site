@@ -12,28 +12,6 @@ export default function PreInscriptionPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Codes postaux et villes valides autour de Vaison-la-Romaine (10 km)
-  const zonesValides = [
-    { cp: '84110', ville: 'Vaison-la-Romaine' },
-    { cp: '84340', ville: 'Entrechaux' },
-    { cp: '84110', ville: 'Séguret' },
-    { cp: '84110', ville: 'Sablet' },
-    { cp: '84110', ville: 'Roaix' },
-    { cp: '84110', ville: 'Rasteau' },
-    { cp: '84110', ville: 'Crestet' },
-    { cp: '84110', ville: 'Villedieu' },
-    { cp: '84850', ville: 'Camaret-sur-Aigues' },
-    { cp: '84290', ville: 'Cairanne' },
-    { cp: '84190', ville: 'Gigondas' },
-    { cp: '84190', ville: 'Beaumes-de-Venise' },
-    { cp: '84110', ville: 'Puyméras' },
-    { cp: '84110', ville: 'Faucon' },
-    { cp: '84110', ville: 'Saint-Marcellin-lès-Vaison' },
-    { cp: '84110', ville: 'Saint-Romain-en-Viennois' },
-  ];
-  
-  const codesPostauxValides = [...new Set(zonesValides.map(z => z.cp))];
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
@@ -238,28 +216,12 @@ export default function PreInscriptionPage() {
                 </p>
               </div>
 
-              {/* Zone de service avec scroll */}
-              <div className="bg-gradient-to-r from-blue-50 to-primary-50 border-2 border-blue-200 rounded-xl p-3 md:p-4 mb-3 md:mb-4">
-                <p className="text-xs md:text-sm text-blue-900 font-bold mb-2 md:mb-3 flex items-center gap-1.5 md:gap-2">
-                  <MapPin className="text-blue-600" size={16} />
-                  <span className="text-xs md:text-sm">Zone : Vaison-la-Romaine (10 km)</span>
+              {/* Zone de service */}
+              <div className="bg-gradient-to-r from-blue-50 to-primary-50 border-2 border-blue-200 rounded-xl p-3 md:p-4 mb-3 md:mb-4 text-center">
+                <p className="text-sm md:text-base text-blue-900 font-bold flex items-center justify-center gap-2">
+                  <MapPin className="text-blue-600" size={20} />
+                  <span>Zone : Vaison-la-Romaine et environs (10 km)</span>
                 </p>
-                <div className="relative">
-                  <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-                    {zonesValides.map((zone, index) => (
-                      <div
-                        key={index}
-                        className="flex-shrink-0 bg-white px-2 md:px-3 py-1 md:py-1.5 rounded-full border border-blue-300 shadow-sm"
-                      >
-                        <span className="text-[10px] md:text-xs font-semibold text-blue-900 whitespace-nowrap">
-                          {zone.ville}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  {/* Indication de scroll */}
-                  <div className="absolute right-0 top-0 bottom-2 w-8 bg-gradient-to-l from-blue-50 to-transparent pointer-events-none"></div>
-                </div>
               </div>
 
               {/* Message d'erreur */}
