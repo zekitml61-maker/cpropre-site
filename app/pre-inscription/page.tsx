@@ -178,27 +178,27 @@ export default function PreInscriptionPage() {
               </p>
 
               <div className="grid grid-cols-3 gap-2 md:space-y-4 md:grid-cols-1">
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg animate-bounce-slow group-hover:rotate-12 transition-transform">
-                    <Truck className="text-white animate-truck-move" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-yellow-400/50 transition-all duration-300 group-hover:-translate-y-1">
+                    <Truck className="text-white transition-transform duration-300 group-hover:scale-110" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Collecte</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg animate-float group-hover:rotate-12 transition-transform">
-                    <Sparkles className="text-white animate-sparkle-shine" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-blue-400/50 transition-all duration-300 group-hover:-translate-y-1">
+                    <Sparkles className="text-white transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Nettoyage</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all animate-fadeInUp hover:scale-110" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg animate-bounce-slow group-hover:rotate-12 transition-transform">
-                    <Home className="text-white" size={22} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 transition-all duration-300 animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg hover:shadow-xl group-hover:shadow-green-400/50 transition-all duration-300 group-hover:-translate-y-1">
+                    <Home className="text-white transition-transform duration-300 group-hover:scale-110" size={22} />
                   </div>
                   <div className="text-center md:text-left">
                     <h3 className="font-black text-xs md:text-xl text-white leading-tight">Livraison</h3>
