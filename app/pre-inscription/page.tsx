@@ -12,6 +12,15 @@ export default function PreInscriptionPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
+  // Calcul de la deadline - 1 mois à partir d'aujourd'hui
+  const today = new Date();
+  const deadline = new Date(today);
+  deadline.setMonth(deadline.getMonth() + 1);
+  
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
@@ -146,6 +155,26 @@ export default function PreInscriptionPage() {
                 Le pressing qui vient<br />
                 <span className="text-yellow-300">à vous</span>
               </h2>
+
+              {/* Barre de progression deadline */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 border border-white/20">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-xs font-bold text-white">Lancement prévu</span>
+                  <span className="text-xs font-bold text-yellow-300">{formatDate(deadline)}</span>
+                </div>
+                <div className="relative w-full h-3 bg-white/20 rounded-full overflow-hidden">
+                  <div 
+                    className="absolute top-0 left-0 h-full bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 rounded-full transition-all duration-1000"
+                    style={{ width: '45%' }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[k2000_2s_linear_infinite]"></div>
+                  </div>
+                </div>
+                <div className="flex justify-between items-center mt-1.5">
+                  <span className="text-[10px] text-white/70">Préparation en cours</span>
+                  <span className="text-xs font-black text-white">45%</span>
+                </div>
+              </div>
 
               <p className="text-xs sm:text-lg md:text-xl text-white/90 leading-snug">
                 Plus besoin de vous déplacer ! <strong>C'Propre</strong> révolutionne le pressing avec la collecte et livraison à domicile.
