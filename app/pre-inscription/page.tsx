@@ -143,7 +143,7 @@ export default function PreInscriptionPage() {
         <div className="max-w-6xl w-full px-2 mx-auto">
           <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Partie gauche - Texte marketing AMÉLIORÉ - Optimisé mobile */}
-            <div className="text-white space-y-4 md:space-y-6 order-2 md:order-1">
+            <div className="text-white space-y-4 md:space-y-6 order-1 md:order-1">
               <div className="relative inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full shadow-2xl overflow-hidden">
                 {/* Effet K2000 */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[slide_2s_ease-in-out_infinite]" style={{
@@ -199,7 +199,7 @@ export default function PreInscriptionPage() {
             </div>
 
             {/* Partie droite - Formulaire AMÉLIORÉ - Optimisé mobile */}
-            <div className="bg-white rounded-xl md:rounded-3xl shadow-2xl p-3 sm:p-4 md:p-6 lg:p-8 border-2 md:border-4 border-primary-500/20 w-full max-w-full mx-auto order-1 md:order-2">
+            <div className="bg-white rounded-xl md:rounded-3xl shadow-2xl p-3 sm:p-4 md:p-6 lg:p-8 border-2 md:border-4 border-primary-500/20 w-full max-w-full mx-auto order-2 md:order-2">
               <div className="text-center mb-3 md:mb-5">
                 <div className="inline-flex items-center gap-1.5 bg-green-100 text-green-800 px-2.5 py-1 md:px-4 md:py-2 rounded-full mb-2 md:mb-3">
                   <CheckCircle size={16} className="md:w-5 md:h-5" />
