@@ -136,10 +136,10 @@ export default function PreInscriptionPage() {
           </div>
           
           <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4">
-            <span className="inline-block text-white drop-shadow-2xl relative animate-pulse">
-              <span className="relative z-10">C'Propre</span>
-              {/* Effet glow pulsant sur le logo */}
-              <span className="absolute inset-0 blur-xl bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-400 opacity-60 animate-gradient-x"></span>
+            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl animate-gradient-x" style={{
+              backgroundSize: '200% auto'
+            }}>
+              C'Propre
             </span>
           </h1>
         </div>
