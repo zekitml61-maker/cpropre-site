@@ -126,12 +126,13 @@ export default function PreInscriptionPage() {
             <div className="w-64 h-24 md:w-96 md:h-32 bg-gradient-to-r from-primary-500/30 via-blue-500/30 to-primary-500/30 blur-3xl animate-pulse"></div>
           </div>
           
-          <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4 overflow-hidden">
-            <span className="inline-block text-white drop-shadow-2xl relative">
+          <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4">
+            <span className="inline-block text-white drop-shadow-2xl relative overflow-hidden px-2">
               C'Propre
-              {/* Effet K2000 sur le logo */}
-              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-[k2000_2s_linear_infinite]" style={{
-                animation: 'k2000 2s linear infinite'
+              {/* Effet K2000 optimisé sur le logo */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent w-full h-full" style={{
+                animation: 'k2000 2.5s linear infinite',
+                backgroundSize: '200% 100%'
               }}></span>
             </span>
           </h1>
@@ -150,31 +151,31 @@ export default function PreInscriptionPage() {
                 Plus besoin de vous déplacer ! <strong>C'Propre</strong> révolutionne le pressing avec la collecte et livraison à domicile.
               </p>
 
-              <div className="grid grid-cols-3 gap-1.5 md:space-y-4 md:grid-cols-1">
-                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
-                    <Truck className="text-white" size={16} />
+              <div className="grid grid-cols-3 gap-2 md:space-y-4 md:grid-cols-1">
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-yellow-300 to-yellow-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse">
+                    <Truck className="text-white" size={22} />
                   </div>
                   <div className="text-center md:text-left">
-                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Collecte</h3>
+                    <h3 className="font-black text-xs md:text-xl text-white leading-tight">Collecte</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
-                    <Sparkles className="text-white" size={16} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.2s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-blue-300 to-blue-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.2s' }}>
+                    <Sparkles className="text-white" size={22} />
                   </div>
                   <div className="text-center md:text-left">
-                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Nettoyage</h3>
+                    <h3 className="font-black text-xs md:text-xl text-white leading-tight">Nettoyage</h3>
                   </div>
                 </div>
 
-                <div className="group flex flex-col items-center gap-1 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2 md:p-4 rounded-lg hover:bg-white/20 transition-all border border-white/20 animate-fadeInUp" style={{ animationDelay: '0.3s', opacity: 0 }}>
-                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-1.5 md:p-3 rounded-lg shadow-lg group-hover:scale-110 transition-transform">
-                    <Home className="text-white" size={16} />
+                <div className="group flex flex-col items-center gap-1.5 md:flex-row md:items-start md:gap-4 bg-white/10 backdrop-blur-sm p-2.5 md:p-4 rounded-lg hover:bg-white/20 transition-all animate-fadeInUp hover:scale-105" style={{ animationDelay: '0.3s', opacity: 0 }}>
+                  <div className="bg-gradient-to-br from-green-300 to-green-500 p-2 md:p-3 rounded-xl shadow-lg group-hover:scale-110 transition-transform group-hover:rotate-6 animate-pulse" style={{ animationDelay: '0.4s' }}>
+                    <Home className="text-white" size={22} />
                   </div>
                   <div className="text-center md:text-left">
-                    <h3 className="font-black text-[10px] md:text-xl text-white leading-tight">Livraison</h3>
+                    <h3 className="font-black text-xs md:text-xl text-white leading-tight">Livraison</h3>
                   </div>
                 </div>
               </div>
