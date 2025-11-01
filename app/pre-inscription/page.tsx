@@ -5,11 +5,8 @@ import { Sparkles, Mail, Phone, MapPin, User, CheckCircle, Rocket, Star, Zap, Gi
 
 export default function PreInscriptionPage() {
   const [formData, setFormData] = useState({
-    nom: '',
     email: '',
-    telephone: '',
-    ville: '',
-    codePostal: ''
+    telephone: ''
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -42,13 +39,6 @@ export default function PreInscriptionPage() {
     setError('');
     setLoading(true);
 
-    // Vérifier si le code postal est dans la zone de service
-    if (!codesPostauxValides.includes(formData.codePostal)) {
-      setError(`Désolé, notre service n'est pas encore disponible dans votre zone. Nous desservons actuellement Vaison-la-Romaine et ses environs (10 km).`);
-      setLoading(false);
-      return;
-    }
-
     try {
       // Envoyer les données à l'API (qui envoie l'email)
       const response = await fetch('/api/pre-inscription', {
@@ -57,7 +47,11 @@ export default function PreInscriptionPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
+          email: formData.email,
+          telephone: formData.telephone,
+          nom: 'Non renseigné',
+          ville: 'Non renseigné',
+          codePostal: '84110',
           date: new Date().toISOString(),
         }),
       });
@@ -276,24 +270,6 @@ export default function PreInscriptionPage() {
               )}
 
               <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
-                {/* Nom */}
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">
-                    Nom complet *
-                  </label>
-                  <div className="relative">
-                    <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-                    <input
-                      type="text"
-                      required
-                      value={formData.nom}
-                      onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition"
-                      placeholder="Jean Dupont"
-                    />
-                  </div>
-                </div>
-
                 {/* Email */}
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">
@@ -328,40 +304,6 @@ export default function PreInscriptionPage() {
                       placeholder="06 12 34 56 78"
                     />
                   </div>
-                </div>
-
-                {/* Ville */}
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">
-                    Ville *
-                  </label>
-                  <div className="relative">
-                    <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-                    <input
-                      type="text"
-                      required
-                      value={formData.ville}
-                      onChange={(e) => setFormData({ ...formData, ville: e.target.value })}
-                      className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition"
-                      placeholder="Vaison-la-Romaine"
-                    />
-                  </div>
-                </div>
-
-                {/* Code postal */}
-                <div>
-                  <label className="block text-sm font-bold text-gray-700 mb-2">
-                    Code postal *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.codePostal}
-                    onChange={(e) => setFormData({ ...formData, codePostal: e.target.value })}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-500 focus:outline-none transition"
-                    placeholder="84110"
-                    maxLength={5}
-                  />
                 </div>
 
                 {/* Bouton submit */}
