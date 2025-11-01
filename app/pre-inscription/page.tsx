@@ -136,10 +136,16 @@ export default function PreInscriptionPage() {
           </div>
           
           <h1 className="relative text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-1 md:mb-4">
-            <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl animate-gradient-x" style={{
-              backgroundSize: '200% auto'
-            }}>
-              C'Propre
+            <span className="inline-block relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl animate-gradient-x" style={{
+                backgroundSize: '200% auto'
+              }}>
+                C'Propre
+              </span>
+              {/* Ligne K2000 en dessous */}
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-white/20 overflow-hidden">
+                <span className="absolute inset-0 h-full w-1/3 bg-gradient-to-r from-transparent via-white to-transparent animate-[k2000_2s_linear_infinite]"></span>
+              </span>
             </span>
           </h1>
         </div>
