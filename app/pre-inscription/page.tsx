@@ -27,8 +27,8 @@ export default function PreInscriptionPage() {
     setLoading(true);
 
     try {
-      // Envoyer les données à l'API (qui envoie l'email)
-      const response = await fetch('/api/pre-inscription', {
+      // Envoyer les données directement à Formspree
+      const response = await fetch('https://formspree.io/f/xvgvjaok', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,10 +36,7 @@ export default function PreInscriptionPage() {
         body: JSON.stringify({
           email: formData.email,
           telephone: formData.telephone,
-          nom: 'Non renseigné',
-          ville: 'Non renseigné',
-          codePostal: '84110',
-          date: new Date().toISOString(),
+          message: `Nouvelle pré-inscription VIP C'Propre\n\nEmail: ${formData.email}\nTéléphone: ${formData.telephone}\nDate: ${new Date().toLocaleString('fr-FR')}\nZone: Vaison + 10 km`,
         }),
       });
 
